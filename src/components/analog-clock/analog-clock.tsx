@@ -37,7 +37,7 @@ export class AnalogClock {
 
   render() {
     return (
-      <div>
+      <div id="wrapper">
         <clock-face hour={this.hour + this.timeZone} minute={this.minute} second={this.second} />
         <time-zone-slider offset={this.timeZone} />
       </div>
