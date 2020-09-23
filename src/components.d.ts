@@ -9,6 +9,9 @@ export namespace Components {
     interface AnalogClock {
     }
     interface ClockFace {
+        "hour": number;
+        "minute": number;
+        "second": number;
     }
     interface MyComponent {
         /**
@@ -54,6 +57,9 @@ declare namespace LocalJSX {
     interface AnalogClock {
     }
     interface ClockFace {
+        "hour"?: number;
+        "minute"?: number;
+        "second"?: number;
     }
     interface MyComponent {
         /**

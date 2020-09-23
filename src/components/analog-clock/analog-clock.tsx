@@ -7,7 +7,7 @@ export class AnalogClock {
   render() {
     return [
       <div>
-        <clock-face />
+        <clock-face hour={12} minute={34} second={56} />
       </div>,
     ];
   }
