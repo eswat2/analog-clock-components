@@ -27,6 +27,9 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TimeZoneSlider {
+        "offset": number;
+    }
 }
 declare global {
     interface HTMLAnalogClockElement extends Components.AnalogClock, HTMLStencilElement {
@@ -47,10 +50,17 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTimeZoneSliderElement extends Components.TimeZoneSlider, HTMLStencilElement {
+    }
+    var HTMLTimeZoneSliderElement: {
+        prototype: HTMLTimeZoneSliderElement;
+        new (): HTMLTimeZoneSliderElement;
+    };
     interface HTMLElementTagNameMap {
         "analog-clock": HTMLAnalogClockElement;
         "clock-face": HTMLClockFaceElement;
         "my-component": HTMLMyComponentElement;
+        "time-zone-slider": HTMLTimeZoneSliderElement;
     }
 }
 declare namespace LocalJSX {
@@ -75,10 +85,15 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TimeZoneSlider {
+        "offset"?: number;
+        "onTimeZoneChanged"?: (event: CustomEvent<any>) => void;
+    }
     interface IntrinsicElements {
         "analog-clock": AnalogClock;
         "clock-face": ClockFace;
         "my-component": MyComponent;
+        "time-zone-slider": TimeZoneSlider;
     }
 }
 export { LocalJSX as JSX };
@@ -88,6 +103,7 @@ declare module "@stencil/core" {
             "analog-clock": LocalJSX.AnalogClock & JSXBase.HTMLAttributes<HTMLAnalogClockElement>;
             "clock-face": LocalJSX.ClockFace & JSXBase.HTMLAttributes<HTMLClockFaceElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "time-zone-slider": LocalJSX.TimeZoneSlider & JSXBase.HTMLAttributes<HTMLTimeZoneSliderElement>;
         }
     }
 }
