@@ -2,6 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'clock-face',
+  styleUrl: 'clock-face.css',
 })
 export class ClockFace {
   @Prop() hour: number;
@@ -22,31 +23,11 @@ export class ClockFace {
 
   render() {
     return (
-      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="95" stroke-width="10" stroke="black" fill="transparent" />
-        <line id="hour-hand" transform={`rotate(${this.hourToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="60" stroke="black" stroke-width="10" stroke-linecap="round" />
-        <line
-          id="minute-hand"
-          transform={`rotate(${this.minuteToDegrees()}, 100, 100)`}
-          x1="100"
-          y1="100"
-          x2="100"
-          y2="30"
-          stroke="black"
-          stroke-width="8"
-          stroke-linecap="round"
-        />
-        <line
-          id="second-hand"
-          transform={`rotate(${this.secondToDegrees()}, 100, 100)`}
-          x1="100"
-          y1="100"
-          x2="100"
-          y2="30"
-          stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
+      <svg class="clock" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle id="circle" cx="100" cy="100" r="95" stroke-width="10" fill="transparent" />
+        <line id="hour-hand" transform={`rotate(${this.hourToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="60" stroke-width="10" stroke-linecap="round" />
+        <line id="minute-hand" transform={`rotate(${this.minuteToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="30" stroke-width="8" stroke-linecap="round" />
+        <line id="second-hand" transform={`rotate(${this.secondToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="30" stroke-width="2" stroke-linecap="round" />
       </svg>
     );
   }
