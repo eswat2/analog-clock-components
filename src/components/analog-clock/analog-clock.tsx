@@ -4,11 +4,26 @@ import { Component, h } from '@stencil/core';
   tag: 'analog-clock',
 })
 export class AnalogClock {
+  get hour(): number {
+    let h: any = new Date().getHours();
+    return h;
+  }
+
+  get minute(): number {
+    let m: any = new Date().getMinutes();
+    return m;
+  }
+
+  get second(): number {
+    let s: any = new Date().getSeconds();
+    return s;
+  }
+
   render() {
-    return [
+    return (
       <div>
-        <clock-face hour={12} minute={34} second={56} />
-      </div>,
-    ];
+        <clock-face hour={this.hour} minute={this.minute} second={this.second} />
+      </div>
+    );
   }
 }
