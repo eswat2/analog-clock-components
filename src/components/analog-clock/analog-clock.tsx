@@ -1,22 +1,33 @@
-import { Component, h } from '@stencil/core';
+import { Component, State, h } from '@stencil/core';
 
 @Component({
   tag: 'analog-clock',
 })
 export class AnalogClock {
+  timer: number;
+
+  @State() time: number = Date.now();
+
+  componentDidLoad() {
+    this.timer = window.setInterval(() => {
+      this.time = Date.now();
+    }, 250);
+  }
+
+  disconnectedCallback() {
+    clearInterval(this.timer);
+  }
+
   get hour(): number {
-    let h: any = new Date().getHours();
-    return h;
+    return new Date(this.time).getHours();
   }
 
   get minute(): number {
-    let m: any = new Date().getMinutes();
-    return m;
+    return new Date(this.time).getMinutes();
   }
 
   get second(): number {
-    let s: any = new Date().getSeconds();
-    return s;
+    return new Date(this.time).getSeconds();
   }
 
   render() {
