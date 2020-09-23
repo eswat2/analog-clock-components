@@ -27,7 +27,7 @@ export class ClockFace {
         <circle id="circle" cx="100" cy="100" r="95" stroke-width="10" fill="transparent" />
         <line id="hour-hand" transform={`rotate(${this.hourToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="60" stroke-width="10" stroke-linecap="round" />
         <line id="minute-hand" transform={`rotate(${this.minuteToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="30" stroke-width="8" stroke-linecap="round" />
-        <line id="second-hand" transform={`rotate(${this.secondToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="30" stroke-width="2" stroke-linecap="round" />
+        <line id="second-hand" transform={`rotate(${this.secondToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="20" stroke-width="2" stroke-linecap="round" />
       </svg>
     );
   }
