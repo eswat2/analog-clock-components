@@ -28,13 +28,11 @@
 ### Depends on
 
 - ion-range
-- ion-label
 
 ### Graph
 ```mermaid
 graph TD;
   time-zone-slider --> ion-range
-  time-zone-slider --> ion-label
   analog-clock --> time-zone-slider
   style time-zone-slider fill:#f9f,stroke:#333,stroke-width:4px
 ```
