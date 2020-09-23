@@ -1,9 +1,11 @@
-import { Component, State, Listen, h } from '@stencil/core';
+import { Component, Prop, State, Listen, h } from '@stencil/core';
 
 @Component({
   tag: 'analog-clock',
 })
 export class AnalogClock {
+  @Prop() timezone: boolean;
+
   timer: number;
 
   @State() time: number = Date.now();
@@ -39,7 +41,7 @@ export class AnalogClock {
     return (
       <div id="wrapper">
         <clock-face hour={this.hour + this.timeZone} minute={this.minute} second={this.second} />
-        <time-zone-slider offset={this.timeZone} />
+        {this.timezone ? <time-zone-slider offset={this.timeZone} /> : ''}
       </div>
     );
   }
