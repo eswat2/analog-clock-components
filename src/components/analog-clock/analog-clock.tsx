@@ -1,19 +1,13 @@
-import { Component, Prop, State, Listen, h } from '@stencil/core';
+import { Component, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'analog-clock',
 })
 export class AnalogClock {
-  @Prop() timezone: boolean;
-
+  @Prop({ attribute: 'time-zone' }) timeZone: number = 0;
   timer: number;
 
   @State() time: number = Date.now();
-  @State() timeZone: number = 0;
-  @Listen('timeZoneChanged')
-  timeZoneChangedHandler(event: CustomEvent) {
-    this.timeZone = event.detail;
-  }
 
   componentDidLoad() {
     this.timer = window.setInterval(() => {
@@ -38,11 +32,6 @@ export class AnalogClock {
   }
 
   render() {
-    return (
-      <div id="wrapper">
-        <clock-face hour={this.hour + this.timeZone} minute={this.minute} second={this.second} />
-        {this.timezone ? <time-zone-slider offset={this.timeZone} /> : ''}
-      </div>
-    );
+    return <clock-face id="clock" hour={this.hour + this.timeZone} minute={this.minute} second={this.second} />;
   }
 }

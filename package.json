@@ -25,5 +25,12 @@
     "@ionic/core": "5.3.3",
     "@stencil/core": "2.0.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "26.0.12",
+    "@types/puppeteer": "3.0.1",
+    "jest": "26.4.2",
+    "jest-cli": "26.4.2",
+    "puppeteer": "5.2.1"
+  }
 }
