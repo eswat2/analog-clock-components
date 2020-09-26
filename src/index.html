@@ -30,39 +30,17 @@
         --clrs-white: #ffffff;
       }
 
-      analog-clock .clock {
-        stroke: var(--clrs-navy);
-      }
-
-      analog-clock #second-hand {
-        stroke: var(--clrs-red);
-      }
-
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .block {
-        margin: 10px;
-        width: 200px;
-        height: 200px;
+      analog-clock {
+        --clock-circle-color: var(--clrs-navy);
+        --clock-hour-color: var(--clrs-navy);
+        --clock-minute-color: var(--clrs-navy);
+        --clock-second-color: var(--clrs-red);
       }
     </style>
-    <script type="module" src="/build/analog-clock-components.esm.js"></script>
-    <script nomodule src="/build/analog-clock-components.js"></script>
+    <script type="module" src="/build/analog-clock.esm.js"></script>
+    <script nomodule src="/build/analog-clock.js"></script>
   </head>
   <body>
-    <!--
-    <div class="row">
-      <div class="block" title="default">
-        <analog-clock />
-      </div>
-      <div class="block" title="offset -4">
-        <analog-clock time-zone="-4" />
-      </div>
-    </div>
-    -->
     <analog-clock title="default" />
   </body>
 </html>

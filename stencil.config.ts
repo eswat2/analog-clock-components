@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'analog-clock-components',
+  namespace: 'analog-clock',
   outputTargets: [
     {
       type: 'dist',

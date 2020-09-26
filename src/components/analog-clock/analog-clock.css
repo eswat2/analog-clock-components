@@ -1,0 +1,12 @@
+.clock #circle {
+  stroke: var(--clock-circle-color, black);
+}
+.clock #hour {
+  stroke: var(--clock-hour-color, black);
+}
+.clock #minute {
+  stroke: var(--clock-minute-color, black);
+}
+.clock #second {
+  stroke: var(--clock-second-color, black);
+}
