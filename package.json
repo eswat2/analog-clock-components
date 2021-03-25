@@ -27,11 +27,11 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@stencil/core": "2.5.0"
+    "@stencil/core": "2.5.1"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "26.0.21",
+    "@types/jest": "26.0.22",
     "@types/puppeteer": "5.4.3",
     "cspell": "5.3.9",
     "eslint": "7.22.0",
