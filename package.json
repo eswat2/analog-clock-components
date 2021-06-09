@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/jest": "26.0.23",
     "@types/puppeteer": "5.4.3",
-    "cspell": "5.6.0",
+    "cspell": "5.6.1",
     "eslint": "7.28.0",
     "jest": "27.0.4",
     "jest-cli": "27.0.4",
