@@ -27,7 +27,7 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@stencil/core": "2.7.1"
+    "@stencil/core": "2.8.0"
   },
   "license": "MIT",
   "devDependencies": {
