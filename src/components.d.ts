@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AnalogClock {
+        "size": number;
         "timeZone": number;
     }
 }
@@ -23,6 +24,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AnalogClock {
+        "size"?: number;
         "timeZone"?: number;
     }
     interface IntrinsicElements {

@@ -6,7 +6,9 @@ import { Component, Prop, State, h } from '@stencil/core';
   shadow: true,
 })
 export class AnalogClock {
+  @Prop() size: number = undefined;
   @Prop({ attribute: 'time-zone' }) timeZone: number = 0;
+
   timer: number;
 
   @State() time: number = Date.now();
@@ -48,7 +50,7 @@ export class AnalogClock {
 
   render() {
     return (
-      <svg class="clock" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <svg class="clock" viewBox="0 0 200 200" width={this.size} height={this.size}>
         <circle id="circle" cx="100" cy="100" r="95" stroke-width="10" fill="transparent" />
         <line id="hour" transform={`rotate(${this.hourToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="60" stroke-width="10" stroke-linecap="round" />
         <line id="minute" transform={`rotate(${this.minuteToDegrees()}, 100, 100)`} x1="100" y1="100" x2="100" y2="30" stroke-width="8" stroke-linecap="round" />
