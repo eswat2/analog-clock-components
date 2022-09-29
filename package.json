@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "29.0.3",
+    "@types/jest": "29.1.0",
     "@types/puppeteer": "5.4.6",
     "cspell": "6.10.1",
     "eslint": "8.24.0",
