@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "cspell": "7.0.1",
+    "cspell": "7.1.1",
     "eslint": "8.48.0",
     "prettier": "3.0.2",
     "tslint": "6.1.3",
