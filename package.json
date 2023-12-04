@@ -25,11 +25,11 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@stencil/core": "4.8.0"
+    "@stencil/core": "4.8.1"
   },
   "license": "MIT",
   "devDependencies": {
-    "cspell": "8.1.0",
+    "cspell": "8.1.2",
     "eslint": "8.55.0",
     "prettier": "3.1.0",
     "tslint": "6.1.3",
