@@ -1,6 +1,6 @@
 {
   "name": "analog-clock-components",
-  "version": "0.1.455",
+  "version": "0.1.456",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
