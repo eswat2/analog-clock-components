@@ -32,6 +32,6 @@
     "cspell": "8.16.0",
     "eslint": "9.15.0",
     "prettier": "3.3.3",
-    "typescript": "5.6.3"
+    "typescript": "5.7.2"
   }
 }
