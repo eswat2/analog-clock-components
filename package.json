@@ -25,13 +25,13 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@stencil/core": "4.26.0"
+    "@stencil/core": "4.27.0"
   },
   "license": "MIT",
   "devDependencies": {
-    "cspell": "8.17.4",
+    "cspell": "8.17.5",
     "eslint": "9.21.0",
-    "prettier": "3.5.1",
+    "prettier": "3.5.2",
     "typescript": "5.7.3"
   }
 }

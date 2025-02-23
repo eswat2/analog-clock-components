@@ -9,6 +9,10 @@ export namespace Components {
     interface AnalogClock {
         "size": number;
         "timeZone": number;
+        /**
+         * @deprecated use camelCase instead. Support for dash-casing will be removed in Stencil v5.
+         */
+        "time-zone"?: number;
     }
 }
 declare global {
@@ -26,6 +30,10 @@ declare namespace LocalJSX {
     interface AnalogClock {
         "size"?: number;
         "timeZone"?: number;
+        /**
+         * @deprecated use camelCase instead. Support for dash-casing will be removed in Stencil v5.
+         */
+        "time-zone"?: number;
     }
     interface IntrinsicElements {
         "analog-clock": AnalogClock;
