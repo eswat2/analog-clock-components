@@ -39,15 +39,21 @@ declare namespace LocalJSX {
          */
         "timeZone"?: number;
     }
+
+    interface AnalogClockAttributes {
+        "size": number;
+        "timeZone": number;
+    }
+
     interface IntrinsicElements {
-        "analog-clock": AnalogClock;
+        "analog-clock": Omit<AnalogClock, keyof AnalogClockAttributes> & { [K in keyof AnalogClock & keyof AnalogClockAttributes]?: AnalogClock[K] } & { [K in keyof AnalogClock & keyof AnalogClockAttributes as `attr:${K}`]?: AnalogClockAttributes[K] } & { [K in keyof AnalogClock & keyof AnalogClockAttributes as `prop:${K}`]?: AnalogClock[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "analog-clock": LocalJSX.AnalogClock & JSXBase.HTMLAttributes<HTMLAnalogClockElement>;
+            "analog-clock": LocalJSX.IntrinsicElements["analog-clock"] & JSXBase.HTMLAttributes<HTMLAnalogClockElement>;
         }
     }
 }
