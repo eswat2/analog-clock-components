@@ -28,6 +28,10 @@
   "dependencies": {
     "@stencil/core": "4.43.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eswat2/analog-clock-components.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "bumpp": "11.1.0",
