@@ -7,4 +7,5 @@ allowBuilds:
   'proto-tailwindcss-clrs': true
 
 minimumReleaseAgeExclude:
-  - bumpp@12.2.1
+  - '@stencil/core@4.44.1'
+  - eslint@10.9.0
