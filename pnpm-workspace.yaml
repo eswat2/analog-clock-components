@@ -5,3 +5,7 @@ packages:
 allowBuilds:
   'esbuild': true
   'proto-tailwindcss-clrs': true
+
+minimumReleaseAgeExclude:
+  - '@stencil/core@4.45.1'
+  - prettier@3.9.9
