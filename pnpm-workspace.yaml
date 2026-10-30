@@ -4,4 +4,8 @@ packages:
 
 allowBuilds:
   'esbuild': true
+  'koffi': true
   'proto-tailwindcss-clrs': true
+
+minimumReleaseAgeExclude:
+  - eslint@10.14.0
