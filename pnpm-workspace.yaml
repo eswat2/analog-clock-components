@@ -6,3 +6,7 @@ allowBuilds:
   'esbuild': true
   'koffi': true
   'proto-tailwindcss-clrs': true
+
+minimumReleaseAgeExclude:
+  - '@stencil/core@4.45.3'
+  - prettier@3.10.0
