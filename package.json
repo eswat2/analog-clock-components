@@ -41,6 +41,5 @@
     "prettier": "3.10.1",
     "typescript": "5.9.3",
     "yoctocolors": "2.2.0"
-  },
-  "packageManager": "pnpm@12.18.0"
+  }
 }
